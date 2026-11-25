@@ -152,6 +152,12 @@ To receive submissions directly in your inbox without opening an email app, you 
 3. Leave **Build command** blank and set **Build output directory** to `/` (root).
 4. Click **Save and Deploy** to publish globally with automatic HTTPS.
 
+### Option D: Deploy on Vercel (Free)
+1. Sign in at [vercel.com](https://vercel.com/) with your GitHub account.
+2. Click **Add New… → Project** and import your `Rana-Rehan-Protfolio` repository.
+3. Keep **Framework Preset** as `Other`, leave **Build Command** empty, and keep **Output Directory** as `.`.
+4. Click **Deploy** — `vercel.json` is already included for clean URLs, security headers, and static asset caching.
+
 ---
 
 ## 9. How to Connect a Custom Domain Later

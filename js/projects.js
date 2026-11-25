@@ -14,6 +14,48 @@
 
 window.PORTFOLIO_PROJECTS = [
   {
+    id: 'brand-scaling-seo',
+    title: 'Brand Scaling — Technical SEO, AEO/GEO & Authority Engine',
+    client: 'Brand Scaling (Brand Scaling Hacks LLC, New York, NY)',
+    category: 'Technical SEO',
+    thumbStyle: 'seo',
+    thumbLabel: 'brandscalinghacks.com',
+    statusBadge: 'Featured Case Study',
+    description:
+      'End-to-end Technical SEO, Answer Engine Optimization (AEO/GEO), JSON-LD entity architecture, and Digital PR for a New York DTC ecommerce agency — transforming a React SPA into a 252-page prerendered search asset.',
+    technologies: ['Technical SEO', 'AEO / GEO', 'Schema.org', 'Digital PR', 'Google Search Console'],
+    highlights: [
+      'Static Prerendering & Technical Audit (251 Pages / 0 Errors): Validated 168 indexable URLs across 5 segmented XML sitemaps with 100% pass rates on canonicals, meta titles/descriptions, single-H1 compliance, and median 59 internal links per page.',
+      'Schema.org & AI Search (AEO/GEO): Deployed a unified JSON-LD entity graph (Organization, ProfessionalService, Person, Service, FAQPage, VideoObject, WebApplication, BreadcrumbList, SpeakableSpecification) alongside /llms.txt and /llms-full.txt.',
+      'Off-Page Authority & Digital PR: Built 9 verified agency and PR profiles (Clutch, GoodFirms, DesignRush, Sortlist, Agency Spotter, Crunchbase, Featured.com, Connectively/HARO, Qwoted), earning 12 strategic backlinks across core commercial pages and case studies.',
+      'Measurable Search Console Growth: Doubled weekly organic impressions (324 → 632 in 7 days), expanded Google indexation with zero quality rejections, and lifted core commercial pages by +15 to +29.8 positions.'
+    ],
+    liveUrl: 'https://www.brandscalinghacks.com',
+    sourceUrl: '',
+    isPlaceholder: false
+  },
+  {
+    id: 'islamabad-best-furniture',
+    title: 'Islamabad Best Furniture — Full-Stack SEO, AEO/GEO & Content Architecture',
+    client: 'Islamabad Best Furniture (Islamabad / Rawalpindi)',
+    category: 'SEO Projects',
+    thumbStyle: 'strategy',
+    thumbLabel: 'islamabadbestfurniture.com',
+    statusBadge: 'Featured Case Study',
+    description:
+      'Full-stack technical SEO, AEO/GEO optimization, structured data automation, and hyper-local /guides blog architecture built on Next.js 16, TypeScript, Tailwind CSS v4, Prisma ORM, and PostgreSQL.',
+    technologies: ['Next.js 16', 'TypeScript', 'Tailwind CSS v4', 'Prisma ORM', 'PostgreSQL', 'AEO / GEO'],
+    highlights: [
+      'Google Search Console Audit & Page Optimization: Audited Search Performance exports (queries, impressions, CTR, average position) and upgraded metadata, heading hierarchy, internal linking, and intent-matched copy across the top 10 organic landing pages (/wood/diyar, /showroom, /shop, /wood/kitchen-materials, /wood, /services/furniture-repair, and core bed categories).',
+      'Structured Data & Technical SEO: Implemented automated FAQPage, Article, Service, and ItemList JSON-LD schemas, clean canonical rules, and dynamic XML sitemaps.',
+      'AEO & GEO Implementation: Built /llms.txt and /llms-full.txt endpoints, configured robots.ts for AI search engines, and added direct-answer summaries and comparison content for Google AI Overviews, ChatGPT Search, and Perplexity.',
+      'Blog & Local Landing Experience: Built a responsive image-card blog hub (/guides) with hero imagery, date metadata, FAQ sections, and hyper-local Islamabad/Rawalpindi targeting without disturbing the existing design system.'
+    ],
+    liveUrl: 'https://islamabadbestfurniture.com',
+    sourceUrl: '',
+    isPlaceholder: false
+  },
+  {
     id: 'rbo-accounting-uae',
     title: 'RBO Accounting & Audit Firm (UAE)',
     category: 'Technical SEO',

@@ -381,6 +381,14 @@
                  </button>`
               : '';
 
+          const caseStudyAction =
+            Array.isArray(project.highlights) && project.highlights.length
+              ? `<button type="button" class="btn btn--secondary btn--sm" data-project-case-study="${escapeHtml(project.id)}">
+                   <span>Case Study</span>
+                   <i data-lucide="file-text" aria-hidden="true"></i>
+                 </button>`
+              : '';
+
           const sourceBtnClass = project.liveUrl ? 'btn--secondary' : 'btn--primary';
           const sourceAction = project.sourceUrl
             ? `<a href="${escapeHtml(project.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="btn ${sourceBtnClass} btn--sm">
@@ -407,6 +415,7 @@
                 <ul class="tech-list">${techHtml}</ul>
                 <div class="project-card__actions">
                   ${viewAction}
+                  ${caseStudyAction}
                   ${sourceAction}
                 </div>
               </div>
@@ -436,8 +445,43 @@
       });
     }
 
-    // Placeholder project preview notice
+    // Case Study & Placeholder project modals
     grid.addEventListener('click', (event) => {
+      const caseBtn = event.target.closest('[data-project-case-study]');
+      if (caseBtn) {
+        const id = caseBtn.getAttribute('data-project-case-study');
+        const project = projects.find((item) => item.id === id);
+        if (!project) return;
+
+        const clientLine = project.client
+          ? `<p><strong>Client:</strong> ${escapeHtml(project.client)}</p>`
+          : '';
+        const listItems = (project.highlights || [])
+          .map((item) => `<li>${escapeHtml(item)}</li>`)
+          .join('');
+        const liveBtn = project.liveUrl
+          ? `<a href="${escapeHtml(project.liveUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+               <span>Visit Live Website</span>
+               <i data-lucide="external-link" aria-hidden="true"></i>
+             </a>`
+          : '';
+
+        modalController.open({
+          eyebrow: `${project.category} · Case Study`,
+          title: project.title,
+          bodyHtml: `
+            ${clientLine}
+            <p>${escapeHtml(project.description)}</p>
+            <ul class="modal__list">${listItems}</ul>
+          `,
+          footerHtml: `
+            <button type="button" class="btn btn--secondary btn--sm" data-modal-close>Close</button>
+            ${liveBtn}
+          `
+        });
+        return;
+      }
+
       const btn = event.target.closest('[data-project-placeholder]');
       if (!btn) return;
       const id = btn.getAttribute('data-project-placeholder');

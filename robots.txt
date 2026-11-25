@@ -1,8 +1,8 @@
 # Robots.txt for Rana Rehan Personal Portfolio
-# Replace https://YOUR-DOMAIN.com with your live domain before deploying.
+# Replace https://rana-rehan-portfolio.vercel.app with your live domain before deploying.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://rana-rehan-portfolio.vercel.app/sitemap.xml
 

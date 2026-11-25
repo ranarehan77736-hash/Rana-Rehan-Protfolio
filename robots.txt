@@ -1,0 +1,8 @@
+# Robots.txt for Rana Rehan Personal Portfolio
+# Replace https://YOUR-DOMAIN.com with your live domain before deploying.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+
